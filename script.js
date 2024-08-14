@@ -5,7 +5,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
 let show1 = show2 = show3 = show4 = show5 = show6 = show7 = show8 = show9 = show10 = true;
 document.addEventListener("scroll", (event) => {
 
-    let scrollY = window.scrollY + 1000;
+    let aux = window.innerHeight*0.75;
+    let scrollY = window.scrollY + aux;
     var ceremonyContainer = document.getElementById('ceremony-container');
     var receptionContainer = document.getElementById('reception-container');
     var dressContainer = document.getElementById('dress-container');
