@@ -7,6 +7,15 @@ body {
 .container {
     text-align: center;
     margin-top: 20%;
+    &.reception-section {
+        margin-top: -45%;
+    }
+    &.dress-code-section {
+        margin-top: -45%;
+    }
+    &.ceremony-section {
+        margin-top: -45%;
+    }
 }
 
 .nosotros-section {
@@ -296,4 +305,25 @@ body {
 
 .audio-container {
     margin-top: -90px;
+}
+
+.first-branch {
+    transform: translateX(-50%) translateY(-20%);
+    max-width: 45%;
+    max-height: 45%;
+    opacity: 20%;
+}
+
+.second-branch {
+    transform: scaleX(-1) translateX(-180%) translateY(-30%);
+    max-width: 45%;
+    max-height: 30%;
+    opacity: 35%;
+}
+
+.third-branch {
+    transform: scaleX(-1) translateX(-180%) translateY(-30%);
+    max-width: 45%;
+    max-height: 30%;
+    opacity: 20%;
 }
