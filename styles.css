@@ -171,12 +171,12 @@ body {
 
 /* The animation code */
 @keyframes move {
-    from {transform: translate(-1000px);}
+    from {transform: translate(-500px);}
     to {transform: translate(0px);}
 }
 .move-element {
     animation: move;
-    animation-duration: 2s;
+    animation-duration: 1s;
     animation-fill-mode: forwards;
 }
 
@@ -206,7 +206,7 @@ body {
 }
 
 .footer-img {
-    max-width: 150%;
+    max-width: 100%;
     filter: invert(100%);
 }
 
@@ -215,8 +215,6 @@ body {
     margin-top: 10px;
     margin-left: 5%;
     margin-right: 5%;
-    /* background-color: #EAE5E1; */
-    /* color: rgb(168, 160, 127); */
     font-size: 14px;
 }
 
