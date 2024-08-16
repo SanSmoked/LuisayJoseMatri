@@ -306,29 +306,52 @@ body {
     overflow-x: hidden;
 }
 
+/* The animation code */
+@keyframes moveBranchLeft {
+    from {transform: scaleX(-1) translateX(-280%) translateY(-30%);}
+    to {transform: scaleX(-1) translateX(-180%) translateY(-30%);}
+}
+
+.move-branch-left {
+    animation-name: moveBranchLeft;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes moveBranchRight {
+    from {transform: translateX(-110%) translateY(-20%);}
+    to {transform: translateX(-50%) translateY(-20%);}
+}
+
+.move-branch-right {
+    animation-name: moveBranchRight;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
 .first-branch {
-    transform: translateX(-50%) translateY(-20%);
+    transform: translateX(-110%) translateY(-20%);
     max-width: 45%;
     max-height: 45%;
     opacity: 20%;
 }
 
 .second-branch {
-    transform: scaleX(-1) translateX(-180%) translateY(-30%);
+    transform: scaleX(-1) translateX(-280%) translateY(-30%);
     max-width: 45%;
     max-height: 30%;
     opacity: 20%;
 }
 
 .third-branch {
-    transform: scaleX(-1) translateX(-180%) translateY(-30%);
+    transform: scaleX(-1) translateX(-280%) translateY(-30%);
     max-width: 45%;
     max-height: 30%;
     opacity: 20%;
 }
 
 .fourth-branch {
-    transform: translateX(-60%) translateY(-20%);
+    transform: translateX(-110%) translateY(-20%);
     max-width: 45%;
     max-height: 45%;
     opacity: 20%;

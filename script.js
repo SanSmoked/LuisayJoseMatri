@@ -2,11 +2,12 @@ document.addEventListener("DOMContentLoaded", function(event) {
     setInterval(updateDate,1000);
 });
 
-let show1 = show2 = show3 = show4 = show5 = show6 = show7 = show8 = show9 = show10 = true;
+let show1 = show2 = show3 = show4 = show5 = show6 = show7 = show8 = show9 = show10 = show11 = show12 = show13 = show14 = true;
 document.addEventListener("scroll", (event) => {
 
     let aux = window.innerHeight*0.75;
     let scrollY = window.scrollY + aux;
+    let scrollYBranches = window.scrollY + window.innerHeight;
     var ceremonyContainer = document.getElementById('ceremony-container');
     var receptionContainer = document.getElementById('reception-container');
     var dressContainer = document.getElementById('dress-container');
@@ -17,6 +18,12 @@ document.addEventListener("scroll", (event) => {
     var nosotros3 = document.getElementById('nosotros3');
     var nosotros4 = document.getElementById('nosotros4');
     var nosotros5 = document.getElementById('nosotros5');
+
+    var branch1 = document.getElementsByClassName('first-branch')[0];
+    var branch2 = document.getElementsByClassName('second-branch')[0];
+    var branch3 = document.getElementsByClassName('third-branch')[0];
+    var branch4 = document.getElementsByClassName('fourth-branch')[0];
+
 
 
 
@@ -64,6 +71,26 @@ document.addEventListener("scroll", (event) => {
     if(show10 && scrollY > nosotros5.offsetTop){
         show10 = false;
         nosotros5.classList.add('move-element');
+    }
+
+    if(show11 && scrollYBranches > branch2.offsetTop){
+        show11 = false;
+        branch2.classList.add('move-branch-left');
+    }
+
+    if(show12 && scrollYBranches > branch3.offsetTop){
+        show12 = false;
+        branch3.classList.add('move-branch-left');
+    }
+
+    if(show13 && scrollYBranches > branch1.offsetTop){
+        show13 = false;
+        branch1.classList.add('move-branch-right');
+    }
+
+    if(show14 && scrollYBranches > branch4.offsetTop){
+        show14 = false;
+        branch4.classList.add('move-branch-right');
     }
 });
 
