@@ -1,5 +1,16 @@
 document.addEventListener("DOMContentLoaded", function(event) {
-    setInterval(updateDate,1000);
+    const userAgent = window.navigator.userAgent.toLowerCase();
+    const isMobile = /iphone|ipad|android|blackberry|windows phone|opera mini|iemobile|mobile/i.test(userAgent);
+    if (isMobile) {
+        setInterval(updateDate,1000);
+    } else {
+        var desktopContainer = document.getElementsByClassName('desktop-view')[0];
+        var body = document.getElementsByTagName('body')[0];
+        body.style.overflow = "hidden";
+        desktopContainer.style.visibility = 'visible';
+        desktopContainer.style.opacity = '1';
+    }
+
 });
 
 let show1 = show2 = show3 = show4 = show5 = show6 = show7 = show8 = show9 = show10 = show11 = show12 = show13 = show14 = true;
